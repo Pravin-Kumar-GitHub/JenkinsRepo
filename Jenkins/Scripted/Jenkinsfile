@@ -6,6 +6,6 @@ node {
         sh 'git clone https://github.com/Pravin-Kumar-GitHub/spring-petclinic.git'
     }
     stage ('building') {
-        sh 'mvn package'
+        sh 'cd spring-petclinic/ && mvn package'
     }
 }

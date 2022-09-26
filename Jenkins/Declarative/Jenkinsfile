@@ -1,18 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('test') {
+        stage('testing') {
             steps {
                 sh 'echo Hello, This is for testing'
             }
         }
-        stage('learning') {
+        stage('cloning') {
             steps {
                 git url: 'https://github.com/Pravin-Kumar-GitHub/spring-petclinic.git', 
                     branch: 'main'
             }
         }
-        stage('build') {
+        stage('building') {
             steps {
                 sh 'mvn package'
             }
